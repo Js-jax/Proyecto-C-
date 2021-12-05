@@ -2,19 +2,24 @@
 
 using namespace std;
 
-void imc()
+class datos
 {
 
-  float peso = 0;
-  float estatura = 0;
-  float IMC = 0;
+public:
+  void calcular();
+};
+
+void datos ::calcular()
+{
+  float peso = 0, estatura = 0, IMC = 0;
+  int opc;
 
   cout << "Programa para calcular el IMC  \n";
 
   cout << "Ingresa tu peso:  ";
   cin >> peso;
 
-  cout << "Ingresa estatura:  ";
+  cout << "Ingresa tu estatura:  ";
   cin >> estatura;
 
   float est2 = estatura * estatura;
@@ -51,12 +56,11 @@ int main()
 {
 
   int opc;
-  opc = 0;
+  datos retorno;
 
   do
   {
-    imc();
-
+    retorno.calcular();
     cout << "Ingresa 1 para volver a calcular";
     cin >> opc;
 
